@@ -97,5 +97,8 @@ oc adm inspect --dest-dir must-gather --rotated-pod-logs "${group_resources_text
 # Gather SR-IOV resources
 /usr/bin/gather_sriov
 
+#Added by Ronny, just for testing
+/usr/bin/gather-ronny
+
 # force disk flush to ensure that all data gathered is accessible in the copy container
 sync
