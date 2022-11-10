@@ -1,0 +1,9 @@
+#!/bin/bash
+BASE_COLLECTION_PATH="/must-gather"
+KDUMP_PATH="${BASE_COLLECTION_PATH}/Kdump/"
+
+mkdir -p ${KDUMP_PATH}
+systemctl status kdump.service > ${KDUMP_PATH}/kdump_service_status.txt
+dmesg > ${KDUMP_PATH}/dmesg.txt
+cat /etc/kdump.conf > ${KDUMP_PATH}/kdump_conf.txt
+#last thing that need to be done is togather kump core files maybe should be at /var/crash folder
