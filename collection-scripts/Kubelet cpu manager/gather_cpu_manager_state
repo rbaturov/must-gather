@@ -1,0 +1,8 @@
+#!/bin/bash
+BASE_COLLECTION_PATH="/must-gather"
+KUBELET_CPU_MANAGER_PATH="${BASE_COLLECTION_PATH}/Kubelet_cpu_manager/"
+
+mkdir -p ${KUBELET_CPU_MANAGER_PATH}
+cat /var/lib/kubelet/cpu_manager_state > ${KUBELET_CPU_MANAGER_PATH}cpu_manager_state.txt
+
+
