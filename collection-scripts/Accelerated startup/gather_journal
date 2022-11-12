@@ -1,0 +1,8 @@
+#!/bin/bash
+BASE_COLLECTION_PATH="/must-gather"
+JOURNAL_PATH="${BASE_COLLECTION_PATH}/JournalLogs/"
+
+mkdir -p ${JOURNAL_PATH}
+journalctl -u accelerated-container-shutdown.service -u accelerated-container-startup.service > ${JOURNAL_PATH}journal_log.txt
+
+

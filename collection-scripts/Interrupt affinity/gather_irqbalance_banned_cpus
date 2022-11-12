@@ -1,0 +1,8 @@
+#!/bin/bash
+BASE_COLLECTION_PATH="/must-gather"
+IRQBALANCE_PATH="${BASE_COLLECTION_PATH}/IRQBlanceLog/"
+
+mkdir -p ${IRQBALANCE_PATH}
+cat /etc/sysconfig/irqbalance |grep IRQBALANCE_BANNED_CPUS > ${IRQBALANCE_PATH}IRQBALANCE_BANNED_CPUS.txt
+
+
