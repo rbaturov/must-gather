@@ -1,0 +1,8 @@
+#!/bin/bash
+BASE_COLLECTION_PATH="/must-gather"
+CHRONYD_PATH="${BASE_COLLECTION_PATH}/Chronyd/"
+
+mkdir -p ${CHRONYD_PATH}
+systemctl is-active chronyd > ${CHRONYD_PATH}chrony.txt
+
+
